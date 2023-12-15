@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+// Utilities
+$rounded: 10px;
+
+// Variables
+$purple: #493971;
+$purpleLight: #d1c2f2;
+$blue: #7f8ce1;
+$blueLight: #d6e3f8;
+$bgColor: #f6f7fb;
+$green: #d0e9d7;
+$yellow: #d0e9d7;
+$white: #ffffff;
+$black: #000000;
+
+// Font Size
+$smallSize: 14px;
+$defaultSize: 16px;
+$mediumSize: 20px;
+$largeSize: 24px;
+$extraLrageSize: 30px;
+
+// Breakpoint
+@mixin max-width-media-query($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  overflow: hidden;
+  border-radius: $rounded;
+  margin: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 10fr;
+  @include max-width-media-query(767px) {
+    margin: 5px;
+    grid-gap: 5px;
+  }
+}

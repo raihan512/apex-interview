@@ -1,0 +1,102 @@
+@import "../../../Default/Default.scss";
+.my-friends-activity {
+  .user {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .user-image {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 60px;
+      }
+    }
+  }
+  .monitor {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: $purpleLight;
+    .title {
+      font-size: $mediumSize;
+      font-weight: 500;
+    }
+    .progress {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include max-width-media-query(767px) {
+        flex-direction: column;
+      }
+      .progress-bar {
+        margin: 10px;
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 10px solid $purple;
+        border-top-color: $bgColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        .percentage {
+          font-size: $largeSize;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .friends-activity {
+    margin-top: 10px;
+    .title {
+      margin: 10px 0;
+      font-size: $mediumSize;
+      font-weight: 500;
+    }
+    .blog-item {
+      border-radius: 5px;
+      margin: 10px 0;
+      padding: 5px;
+      background-color: $white;
+      .author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        .author-img {
+          margin-right: 5px;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 40px;
+          }
+        }
+        .author-name {
+          margin-left: 10px;
+          font-weight: 500;
+          font-size: $mediumSize;
+        }
+      }
+      .image {
+        img {
+          border-radius: 5px;
+          width: 100%;
+        }
+      }
+    }
+    @include max-width-media-query(767px) {
+      display: none;
+    }
+  }
+}

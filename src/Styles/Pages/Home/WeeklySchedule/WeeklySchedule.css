@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 10fr;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    margin: 5px;
+    grid-gap: 5px;
+  }
+}
+
+.weekly-schedule {
+  grid-column: 1/4;
+}
+@media screen and (max-width: 767px) {
+  .weekly-schedule {
+    grid-column: 1/6;
+  }
+}
+.weekly-schedule .title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.weekly-schedule .schedule-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 10px;
+}
+.weekly-schedule .schedule-item:nth-child(2) {
+  background: radial-gradient(at left top, rgba(191, 239, 251, 0.7), rgba(130, 145, 225, 0.7));
+}
+.weekly-schedule .schedule-item:nth-child(3) {
+  background: radial-gradient(at left top, rgba(247, 247, 170, 0.7), rgba(220, 188, 113, 0.7));
+}
+.weekly-schedule .schedule-item:nth-child(4) {
+  background: radial-gradient(at left top, rgba(252, 224, 194, 0.7), rgba(251, 144, 189, 0.7));
+}
+.weekly-schedule .schedule-item:nth-child(5) {
+  background: radial-gradient(at left top, rgba(233, 252, 196, 0.7), rgba(155, 231, 207, 0.7));
+}
+.weekly-schedule .schedule-item .schedule-date {
+  width: 40px;
+  padding: 0 10px;
+  border-right: 3px solid #000000;
+}
+.weekly-schedule .schedule-item .schedule-date span {
+  font-weight: 500;
+  font-size: 24px;
+}
+.weekly-schedule .schedule-item .schedule-users p {
+  font-weight: 700;
+  font-size: 14px;
+}
+.weekly-schedule .schedule-item .schedule-users img {
+  height: 25px;
+  width: 25px;
+  margin-left: -5px;
+  border-radius: 10px;
+}
+.weekly-schedule .schedule-item .schedule-btn {
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 40px;
+}/*# sourceMappingURL=WeeklySchedule.css.map */
